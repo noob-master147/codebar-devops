@@ -1,0 +1,36 @@
+
+name: Codebar Demo
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+  
+    - name: Build the frontend Docker Image
+      run: |
+        docker build . --file Dockerfile --tag noobmaster147/codebar-frontend
+    - name: Docker push 
+      run: |
+        docker push noobmaster147/codebar-frontend
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          sudo docker-compose down
+          sudo docker-compose pull
+          sudo docker-compose up --build -d
