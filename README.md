@@ -9,13 +9,13 @@ This repository contains the code used in the session with some useful links for
 <br>
 
 ## Step 1 -> Get the Code
-Here is the git [repo](https://github.com/noob-master147/codebar-festival)  
+Here is the git [repo](https://github.com/noob-master147/codebar-devops)  
 Do drop a star, will make me happy 😊
 
 Clone the Repository
 
 ```
-git clone https://github.com/noob-master147/codebar-festival.git
+git clone https://github.com/noob-master147/codebar-devops.git
 
 ```
 <br>
