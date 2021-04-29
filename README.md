@@ -59,14 +59,11 @@ sudo docker ps
 <br><br>
 
 ## Step 6 -> Install Docker and DockerCompose on EC2 instance
-Use the script available [here](https://gist.githubusercontent.com/noob-master147/f96aef074bf28d1db7276e365b646ba5/raw/59672002fb99669065e127bc1bc30aa3dca7c8fa/script.sh)
+Use the script available [here](https://gist.githubusercontent.com/noob-master147/f96aef074bf28d1db7276e365b646ba5/raw/692550e5c5d053fff0b876fcfd66eac25c073f9d/script.sh)
 
 Drop a ⭐ on the [gist](https://gist.github.com/noob-master147/f96aef074bf28d1db7276e365b646ba5) or bookmark it.
 
-
-* Copy the url _https://gist.githubusercontent.com/noob-master147/f96aef074bf28d1db7276e365b646ba5/raw/66063ad3f8bcefa81ac5c058b1081775462f6aa2/script.sh_
-
-* ```sudo curl https://gist.githubusercontent.com/noob-master147/f96aef074bf28d1db7276e365b646ba5/raw/66063ad3f8bcefa81ac5c058b1081775462f6aa2/script.sh >> script.sh```
+* ```sudo curl https://gist.githubusercontent.com/noob-master147/f96aef074bf28d1db7276e365b646ba5/raw/692550e5c5d053fff0b876fcfd66eac25c073f9d/script.sh >> script.sh```
 
 * ```sudo bash script.sh``` 
     * After this step you will have docker and docker-compose installed in your EC2 instance. 
